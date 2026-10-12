@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080b20">
+<meta name="description" content="LUX SMART GH — affordable digital tools, creative services and business websites for Ghanaian businesses.">
+<title>LUX SMART GH — Galactic Digital Studio</title>
+<script src="https://js.paystack.co/v1/inline.js"></script>
+<style>
+:root{
+ --bg:#07091b;--surface:#10152d;--surface2:#171d3a;--text:#f7f8ff;--muted:#b9c4e6;
+ --blue:#4ea5ff;--blue2:#9bd8ff;--mulberry:#c04491;--mulberry2:#f08acb;
+ --line:rgba(132,174,255,.24);--shadow:0 18px 60px rgba(0,0,0,.28);--scale:1;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;font-size:calc(16px * var(--scale));scroll-padding-top:90px}
+body{margin:0;color:var(--text);font-family:Arial,system-ui,sans-serif;line-height:1.6;background:
+ radial-gradient(ellipse at 15% 5%,rgba(54,91,203,.24),transparent 36%),
+ radial-gradient(ellipse at 85% 18%,rgba(192,68,145,.17),transparent 33%),
+ radial-gradient(ellipse at 55% 70%,rgba(37,94,185,.10),transparent 40%),var(--bg);overflow-x:hidden}
+body.light{--bg:#f3f6ff;--surface:#fff;--surface2:#eaf0ff;--text:#101632;--muted:#4d5878;--line:rgba(40,73,150,.2);--shadow:0 18px 60px rgba(29,54,110,.12);background:radial-gradient(ellipse at 15% 5%,rgba(78,165,255,.18),transparent 36%),radial-gradient(ellipse at 85% 18%,rgba(192,68,145,.12),transparent 33%),var(--bg)}
+body.font-georgia{font-family:Georgia,serif}body.font-stencil{font-family:Impact,"Arial Black",sans-serif}body.font-pacifico{font-family:"Brush Script MT","Segoe Script",cursive}body.font-mono{font-family:"Courier New",monospace}body.font-expo{font-family:"Arial Black",Arial,sans-serif}
+a{color:inherit;text-decoration:none}button,input,textarea,select{font:inherit}button,a,.clickable{touch-action:manipulation}
+button{cursor:pointer}button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid var(--blue2);outline-offset:3px}
+.container{width:min(1160px,92%);margin-inline:auto}
+.topbar{position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--bg) 86%,transparent);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.nav{min-height:74px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{font-weight:1000;letter-spacing:.04em;font-size:1.12rem}.brand b{color:var(--blue2)}.brand em{font-style:normal;color:var(--mulberry2)}
+.navlinks{display:flex;align-items:center;gap:16px}.navlinks a{font-size:.9rem;color:var(--muted)}.navlinks a:hover{color:var(--text)}
+.iconbtn,.btn{border:1px solid var(--line);background:var(--surface);color:var(--text);border-radius:14px;padding:10px 14px;font-weight:750;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:transform .2s,border-color .2s,box-shadow .2s}
+.iconbtn{width:46px;height:46px;font-size:1.3rem;padding:0}.btn:hover,.iconbtn:hover{transform:translateY(-2px);border-color:var(--blue);box-shadow:0 8px 28px rgba(78,165,255,.13)}
+.btn.primary{background:linear-gradient(120deg,var(--blue),var(--blue2));color:#061027;border:0}.btn.pink{background:linear-gradient(120deg,var(--mulberry),var(--mulberry2));color:white;border:0}
+.hero{position:relative;text-align:center;padding:88px 0 62px;isolation:isolate}
+.hero:before{content:"";position:absolute;inset:0;z-index:-1;opacity:.45;background-image:radial-gradient(2px 2px at 10% 25%,white 50%,transparent 60%),radial-gradient(1px 1px at 30% 60%,white 50%,transparent 60%),radial-gradient(2px 2px at 75% 20%,white 50%,transparent 60%),radial-gradient(1px 1px at 89% 66%,white 50%,transparent 60%),radial-gradient(1px 1px at 63% 82%,white 50%,transparent 60%);background-size:220px 180px}
+.eyebrow{display:inline-flex;border:1px solid var(--line);border-radius:999px;padding:7px 14px;color:var(--blue2);background:var(--surface);font-size:.82rem;font-weight:800;letter-spacing:.08em}
+h1,h2,h3{line-height:1.13}h1{font-size:clamp(2.45rem,7vw,5.3rem);letter-spacing:-.045em;margin:22px auto;max-width:950px}h2{font-size:clamp(1.7rem,4vw,2.6rem);margin:0 0 12px}h3{margin:8px 0}
+.gradient{background:linear-gradient(100deg,var(--blue2),#fff 42%,var(--mulberry2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{max-width:760px;margin:0 auto 24px;color:var(--muted);font-size:1.08rem}.actions{display:flex;justify-content:center;flex-wrap:wrap;gap:12px}
+.trust{margin-top:24px;color:var(--muted);font-size:.88rem}
+section{padding:42px 0}.sectionhead{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:20px}.sectionhead p{max-width:600px;color:var(--muted);margin:0}
+.card{background:linear-gradient(145deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:23px;padding:22px;box-shadow:var(--shadow)}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.service-icon{width:48px;height:48px;border-radius:15px;display:grid;place-items:center;font-size:1.5rem;background:linear-gradient(135deg,rgba(78,165,255,.2),rgba(192,68,145,.2));border:1px solid var(--line)}
+.muted{color:var(--muted)}.price{color:var(--blue2);font-weight:900;font-size:1.35rem}.tag{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:4px 9px;font-size:.76rem;color:var(--muted);margin:3px}
+input,textarea,select{width:100%;padding:13px 14px;border-radius:13px;border:1px solid var(--line);background:var(--bg);color:var(--text);margin:6px 0 12px}
+textarea{min-height:125px;resize:vertical}label{display:block;font-weight:700;font-size:.9rem}
+.searchrow{display:flex;gap:10px}.searchrow input{margin:0}.searchrow button{flex-shrink:0}
+.results-note{margin-top:10px;color:var(--muted);font-size:.9rem}
+.category-list{display:flex;flex-wrap:wrap;gap:9px}.category{border:1px solid var(--line);background:var(--surface);color:var(--text);border-radius:999px;padding:9px 13px}
+.category.active{border-color:var(--blue);background:rgba(78,165,255,.16)}
+.studio-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.output{white-space:pre-wrap;overflow-wrap:anywhere;min-height:230px;padding:16px;border:1px solid var(--line);border-radius:15px;background:var(--bg);color:var(--text)}
+.note{border-left:3px solid var(--mulberry);padding:10px 14px;background:rgba(192,68,145,.08);border-radius:0 12px 12px 0;color:var(--muted);font-size:.9rem}
+.feature-list{padding-left:20px;color:var(--muted)}.feature-list li{margin:7px 0}
+.faq details{border-bottom:1px solid var(--line);padding:13px 0}.faq summary{font-weight:800;cursor:pointer}.faq p{color:var(--muted)}
+footer{border-top:1px solid var(--line);margin-top:35px;padding:35px 0;color:var(--muted)}.footgrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:24px}.footlinks{display:grid;gap:8px}
+.menu-panel{position:absolute;right:4%;top:66px;width:min(350px,92vw);max-height:80vh;overflow:auto;background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:18px;box-shadow:var(--shadow);display:none}
+.menu-panel.open{display:block;animation:bounceInUp .42s both}.menu-panel h3{margin-top:0}.settingrow{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:12px 0}.settingrow select{width:56%;margin:0}.smallbtn{padding:7px 10px;font-size:.82rem}
+.modal{position:fixed;inset:0;z-index:80;display:none;place-items:center;background:rgba(1,4,20,.76);padding:15px}.modal.open{display:grid}.modalbox{width:min(580px,100%);max-height:90vh;overflow:auto;background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:24px}
+.toast{position:fixed;bottom:18px;left:50%;transform:translate(-50%,130px);transition:transform .3s;z-index:100;background:var(--text);color:var(--bg);border-radius:999px;padding:11px 18px;font-weight:800;max-width:90%;text-align:center}.toast.show{transform:translate(-50%,0)}
+.spark{position:fixed;pointer-events:none;z-index:90;width:5px;height:5px;border-radius:50%;background:var(--blue2);box-shadow:0 0 14px 4px var(--blue);animation:sparkFly .7s ease-out forwards}
+.reveal{animation:fadeIn .8s ease both}.bounce{animation:bounceInUp .7s both}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}@keyframes fadeOut{to{opacity:0;visibility:hidden}}
+@keyframes bounceInUp{0%{opacity:0;transform:translateY(35px) scale(.97)}60%{opacity:1;transform:translateY(-5px) scale(1.01)}100%{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes sparkFly{to{opacity:0;transform:translate(var(--dx),var(--dy)) scale(.1)}}
+@media(max-width:850px){.navlinks{display:none}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.footgrid{grid-template-columns:1fr 1fr}.footgrid>div:first-child{grid-column:1/-1}}
+@media(max-width:600px){.hero{padding:62px 0 38px}.grid,.grid.two,.studio-grid{grid-template-columns:1fr}.sectionhead{display:block}.sectionhead p{margin-top:8px}.searchrow{display:grid}.footgrid{grid-template-columns:1fr}.footgrid>div:first-child{grid-column:auto}.card{padding:18px}.nav{min-height:66px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<header class="topbar"><div class="container nav">
+ <a class="brand" href="#home" aria-label="LUX SMART GH home">LUX <b>SMART</b> <em>GH</em></a>
+ <nav class="navlinks" aria-label="Main navigation"><a href="#services">Services</a><a href="#categories">Business types</a><a href="#studio">AI Studio</a><a href="#booster">Business Booster</a><a href="#help">Help</a></nav>
+ <button class="iconbtn" id="menuToggle" aria-label="Open settings and menu" aria-expanded="false">☰</button>
+ <div class="menu-panel" id="menuPanel" aria-label="Settings menu">
+  <h3>Quick menu & settings</h3>
+  <p class="muted">Personalize your LUX SMART GH experience.</p>
+  <div class="settingrow"><span>Appearance</span><button class="btn smallbtn" id="themeToggle">☾ Dark / ☀ Light</button></div>
+  <div class="settingrow"><label for="fontChoice">Font style</label><select id="fontChoice"><option value="arial">Arial (recommended)</option><option value="georgia">Georgia</option><option value="stencil">Stencil style</option><option value="pacifico">Pacifico-style script</option><option value="mono">PT Mono-style</option><option value="expo">Expo 2 Bold-style</option></select></div>
+  <div class="settingrow"><label for="zoomChoice">Text magnification</label><select id="zoomChoice"><option value="1">100%</option><option value="1.1">110%</option><option value="1.2">120%</option><option value="1.3">130%</option><option value="1.5">150%</option></select></div>
+  <div class="settingrow"><span>Motion effects</span><button class="btn smallbtn" id="motionToggle" aria-pressed="true">On</button></div>
+  <hr style="border-color:var(--line)">
+  <div class="footlinks"><a href="#about">About LUX SMART GH</a><a href="#privacy">Privacy & data safety</a><a href="#license">Licensing & usage</a><a href="#security">Security</a><a href="#help">Help & contact</a></div>
+ </div>
+</div></header>
+<main id="home">
+<section class="hero container reveal">
+ <div class="eyebrow">✦ GALACTIC DIGITAL STUDIO · BUILT FOR GHANA 🇬🇭</div>
+ <h1>WORK SMART.<br><span class="gradient">LOOK PREMIUM.</span><br>GROW FASTER.</h1>
+ <p class="lead">Affordable digital tools, creative services and business websites for ambitious shops and small businesses. Bring an idea — we’ll help you turn it into something useful.</p>
+ <div class="actions"><a class="btn primary" href="#studio">✦ Start a project</a><a class="btn" href="#services">Explore services</a><a class="btn" href="https://wa.me/233557544845" target="_blank" rel="noopener">WhatsApp support</a></div>
+ <p class="trust">Blue · White · Mulberry &nbsp; • &nbsp; Mobile-first &nbsp; • &nbsp; Clear pricing &nbsp; • &nbsp; Secure-by-design</p>
+</section>
+<section class="container" id="search">
+ <div class="card">
+  <h2>What do you need today?</h2><p class="muted">Search in everyday language. We’ll suggest a service to get you started.</p>
+  <form id="searchForm" class="searchrow"><input id="serviceSearch" aria-label="Search digital services" placeholder="e.g. a Christmas flyer for my barber shop"><button class="btn primary" type="submit">Search ✦</button></form>
+  <div class="results-note" id="searchResults" aria-live="polite">Try: website, logo, flyer, menu, business card, advert, marketing, prompt pack.</div>
+ </div>
+</section>
+<section class="container" id="services">
+ <div class="sectionhead"><div><h2>Digital Toolbox</h2><p>Practical creative and digital services for businesses at different stages.</p></div></div>
+ <div class="grid" id="serviceGrid">
+  <article class="card service-card" data-keywords="website shop landing page html css javascript saas"><div class="service-icon">🌌</div><h3>Business Website</h3><p class="muted">A polished mobile-friendly site for your shop, service or brand.</p><div class="price">From ₵150</div><span class="tag">Website · Landing page</span><p><button class="btn primary start-service" data-service="Business Website">Get started</button></p></article>
+  <article class="card service-card" data-keywords="logo brand branding identity"><div class="service-icon">✧</div><h3>Logo & Branding</h3><p class="muted">A visual direction and brand starter pack for your business.</p><div class="price">From ₵40</div><span class="tag">Brand identity</span><p><button class="btn primary start-service" data-service="Logo & Branding">Get started</button></p></article>
+  <article class="card service-card" data-keywords="flyer poster event birthday funeral christmas promotion"><div class="service-icon">🎨</div><h3>Flyers & Posters</h3><p class="muted">Promotional concepts for launches, offers, events and occasions.</p><div class="price">From ₵25</div><span class="tag">Print · Social</span><p><button class="btn primary start-service" data-service="Flyers & Posters">Get started</button></p></article>
+  <article class="card service-card" data-keywords="advertisement social media marketing caption content"><div class="service-icon">🚀</div><h3>Social Media Ads</h3><p class="muted">Campaign ideas, captions and ad copy made for your audience.</p><div class="price">From ₵30</div><span class="tag">Marketing</span><p><button class="btn primary start-service" data-service="Social Media Ads">Get started</button></p></article>
+  <article class="card service-card" data-keywords="restaurant menu price list catalogue wholesale"><div class="service-icon">📋</div><h3>Menus & Price Lists</h3><p class="muted">Clear, attractive menus, catalogues and service price lists.</p><div class="price">From ₵30</div><span class="tag">Retail · Food · Wholesale</span><p><button class="btn primary start-service" data-service="Menus & Price Lists">Get started</button></p></article>
+  <article class="card service-card" data-keywords="prompt ai prompts automation writing coding python javascript"><div class="service-icon">⌘</div><h3>Prompt & Code Packs</h3><p class="muted">Reusable prompts and starter code for learning and legitimate work.</p><div class="price">From ₵15</div><span class="tag">Digital downloads</span><p><button class="btn primary start-service" data-service="Prompt & Code Packs">Get started</button></p></article>
+ </div>
+ <p class="note" style="margin-top:16px">Prices shown are editable starter examples, not a live checkout catalogue. Confirm your real prices and delivery terms before launch.</p>
+</section>
+<section class="container" id="categories">
+ <div class="sectionhead"><div><h2>Made for your kind of business</h2><p>Choose a category to see ideas you can start with.</p></div></div>
+ <div class="category-list" id="categoryList"><button class="category active" data-category="all">All businesses</button><button class="category" data-category="barber">✂️ Barbershop</button><button class="category" data-category="salon">💄 Salon & beauty</button><button class="category" data-category="restaurant">🍽️ Restaurant</button><button class="category" data-category="retail">🛍️ Retail & wholesale</button><button class="category" data-category="hotel">🏨 Hotel & lodge</button><button class="category" data-category="fashion">👗 Fashion</button><button class="category" data-category="tech">💻 Technology</button><button class="category" data-category="events">🎉 Events</button><button class="category" data-category="other">＋ Other</button></div>
+ <div class="card" style="margin-top:16px"><h3 id="categoryTitle">Every business deserves a premium digital presence.</h3><p class="muted" id="categoryCopy">Try a website, logo, promotional flyer, price list, WhatsApp marketing copy or social advertisement.</p><a class="btn" href="#studio">Build my project →</a></div>
+</section>
+<section class="container" id="studio">
+ <div class="sectionhead"><div><h2>LUX AI Studio</h2><p>Prepare a creative brief or prompt for your project. This page includes a local starter assistant; live AI generation requires a securely configured backend.</p></div></div>
+ <div class="card">
+  <div class="studio-grid">
+   <div><form id="projectForm">
+    <label for="projectType">What would you like to create?</label><select id="projectType"><option>Flyer or poster</option><option>Business website</option><option>Logo and branding</option><option>Social media advertisement</option><option>Menu or price list</option><option>AI prompt pack</option><option>Code or learning project</option><option>I'm not sure</option></select>
+    <label for="businessType">Business type</label><input id="businessType" placeholder="e.g. barber shop, salon, food shop">
+    <label for="businessName">Business or project name</label><input id="businessName" placeholder="Your business name">
+    <label for="projectGoal">What do you want it to achieve?</label><textarea id="projectGoal" placeholder="Describe your idea, preferred colours, offers, audience and any text to include."></textarea>
+    <label for="contactInfo">Contact details to include (optional)</label><input id="contactInfo" placeholder="Business phone, WhatsApp, location or website">
+    <label for="referenceFile">Add image or reference file (optional)</label><input id="referenceFile" type="file" accept="image/*,.pdf,.txt,.doc,.docx" multiple>
+    <button class="btn primary" type="submit">Create my project brief</button> <button class="btn" type="button" id="listenBtn">🔊 Listen</button>
+   </form></div>
+   <div><h3>Your project brief</h3><div class="output" id="aiOutput" aria-live="polite">Your organized brief will appear here. Complete the form and select “Create my project brief”.</div><div class="actions" style="justify-content:flex-start;margin-top:12px"><button class="btn" id="copyBrief">Copy brief</button><button class="btn" id="downloadBrief">Download .txt</button></div><p class="note" style="margin-top:14px">This starter assistant organizes your input in your browser. It does not claim to call OpenAI, Gemini, Meta, Canva, TensorFlow or any other AI service until those services are actually integrated.</p></div>
+  </div>
+ </div>
+</section>
+<section class="container" id="booster">
+ <div class="sectionhead"><div><h2>Business Booster</h2><p>Small, useful ideas to help you work smarter and build customer trust.</p></div></div>
+ <div class="grid">
+  <article class="card"><div class="service-icon">📣</div><h3>Promote with purpose</h3><p class="muted">State what you sell, who it helps, the price or offer, and one clear next step.</p></article>
+  <article class="card"><div class="service-icon">🔐</div><h3>Protect your accounts</h3><p class="muted">Use unique passwords, enable two-factor authentication, and never share one-time codes.</p></article>
+  <article class="card"><div class="service-icon">💾</div><h3>Back up your work</h3><p class="muted">Keep a second copy of important customer files, receipts and website code in a safe place.</p></article>
+ </div>
+</section>
+<section class="container" id="security">
+ <div class="card"><h2>Security & responsible technology</h2><p class="muted">LUX SMART GH should use server-side authentication, access controls, validated uploads, rate limits, HTTPS, secure logs and verified payment webhooks. Educational material about ethical hacking must be used only on systems you own or have explicit permission to test.</p><ul class="feature-list"><li>Never put AI provider secrets or Paystack secret keys in browser code.</li><li>Never mark an order paid based only on a browser redirect or screenshot.</li><li>Use a trusted authentication provider and restrict administrator routes.</li><li>Keep backups and monitor failures; no website can honestly guarantee uninterrupted 24/7 operation.</li></ul></div>
+</section>
+<section class="container" id="about">
+ <div class="card"><h2>About LUX SMART GH</h2><p class="muted">LUX SMART GH is designed as an affordable digital studio and marketplace for small businesses in Ghana. The goal is to make websites, branding, advertisements, digital downloads and business tools easier to access, while keeping pricing clear and customers informed.</p></div>
+</section>
+<section class="container" id="privacy">
+ <div class="card"><h2>Privacy & data safety</h2><p class="muted">This front-end starter does not send project form data to a server. Before collecting customer accounts, payments or uploads in production, publish a complete privacy policy that explains what data is collected, why it is used, where it is stored, who processes it, and how customers can request access or deletion. Do not upload confidential information unless the service is ready to protect it.</p></div>
+</section>
+<section class="container" id="license">
+ <div class="card"><h2>Licensing & usage</h2><p class="muted">Before selling any template, design, prompt or code pack, state what the customer receives, permitted uses, restrictions, refund terms and any third-party licensing conditions. Do not promise exclusive ownership of AI-generated or third-party assets unless the applicable rights actually support that promise.</p></div>
+</section>
+<section class="container" id="payments">
+ <div class="card"><h2>Paystack checkout setup</h2><p class="muted">Checkout is intentionally disabled until you add your Paystack public key and a server endpoint that creates orders and verifies transactions. A public key alone does not securely confirm payment or trigger automatic delivery.</p>
+  <label for="payEmail">Customer email for checkout test</label><input id="payEmail" type="email" placeholder="customer@example.com">
+  <label for="payAmount">Amount in Ghana cedis (₵)</label><input id="payAmount" type="number" min="1" step="0.01" value="25">
+  <button class="btn primary" id="payButton">Pay securely (setup required)</button>
+  <p class="note">Do not put your Paystack secret key here. Production flow: browser asks your backend to create an order → backend initializes Paystack → provider confirms via signed webhook/server verification → backend marks the order paid once → secure download is released.</p>
+ </div>
+</section>
+<section class="container faq" id="help">
+ <h2>Help & contact</h2>
+ <details><summary>Is the AI fully connected?</summary><p>No. The project-brief generator in this file works locally. Real generation needs a backend and valid API access for each provider. Never claim an integration is active before testing it.</p></details>
+ <details><summary>Can customers pay by Mobile Money?</summary><p>Paystack may offer Mobile Money options depending on your Ghana merchant account and checkout configuration. Confirm the currently enabled methods in your Paystack dashboard.</p></details>
+ <details><summary>Will the site earn money automatically?</summary><p>The website can automate parts of sales and delivery after you configure products, marketing, hosting, payment verification, customer support and fulfilment. Earnings are not guaranteed and require customers.</p></details>
+ <details><summary>How do I contact the business?</summary><p>WhatsApp: <a href="https://wa.me/233557544845" target="_blank" rel="noopener">0557544845</a> · Email: <a href="mailto:nicholassam1213@gmail.com">nicholassam1213@gmail.com</a></p></details>
+</section>
+</main>
+<footer><div class="container footgrid"><div><a class="brand" href="#home">LUX <b>SMART</b> <em>GH</em></a><p>Work Smart. Look Premium. Grow Faster.</p><p>© <span id="year"></span> LUX SMART GH. Replace this starter copy with your verified business details before launch.</p></div><div><strong>Explore</strong><div class="footlinks"><a href="#services">Services</a><a href="#categories">Business types</a><a href="#studio">AI Studio</a><a href="#booster">Business Booster</a></div></div><div><strong>Information</strong><div class="footlinks"><a href="#about">About</a><a href="#privacy">Privacy</a><a href="#license">License</a><a href="#security">Security</a><a href="#help">Help</a></div></div></div></footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+"use strict";
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const toast=(message)=>{const t=$("#toast");t.textContent=message;t.classList.add("show");clearTimeout(toast.timer);toast.timer=setTimeout(()=>t.classList.remove("show"),2800)};
+$("#year").textContent=new Date().getFullYear();
+const menu=$("#menuPanel"),menuToggle=$("#menuToggle");
+menuToggle.addEventListener("click",()=>{const open=menu.classList.toggle("open");menuToggle.setAttribute("aria-expanded",String(open));menuToggle.textContent=open?"✕":"☰"});
+document.addEventListener("click",e=>{if(!menu.contains(e.target)&&!menuToggle.contains(e.target)){menu.classList.remove("open");menuToggle.setAttribute("aria-expanded","false");menuToggle.textContent="☰"}});
+$("#themeToggle").addEventListener("click",()=>{document.body.classList.toggle("light");toast(document.body.classList.contains("light")?"Light mode enabled":"Dark mode enabled")});
+$("#fontChoice").addEventListener("change",e=>{document.body.classList.remove("font-georgia","font-stencil","font-pacifico","font-mono","font-expo");const v=e.target.value;if(v!=="arial")document.body.classList.add("font-"+v);toast("Font preference updated")});
+$("#zoomChoice").addEventListener("change",e=>{document.documentElement.style.setProperty("--scale",e.target.value);toast("Text size updated")});
+let motion=true;$("#motionToggle").addEventListener("click",e=>{motion=!motion;e.currentTarget.textContent=motion?"On":"Off";e.currentTarget.setAttribute("aria-pressed",String(motion));document.body.classList.toggle("no-motion",!motion);toast(motion?"Motion effects enabled":"Motion effects disabled")});
+$("#searchForm").addEventListener("submit",e=>{e.preventDefault();const q=$("#serviceSearch").value.trim().toLowerCase();if(!q){toast("Type what you need first.");return}let shown=0;$$(".service-card").forEach(card=>{const match=(card.innerText+" "+card.dataset.keywords).toLowerCase().includes(q)||q.split(/\s+/).some(w=>w.length>3&&(card.innerText+" "+card.dataset.keywords).toLowerCase().includes(w));card.style.display=match?"":"none";if(match)shown++});$("#searchResults").textContent=shown?`Showing ${shown} matching service(s).`: "No exact match. Try website, logo, flyer, menu, advert, marketing or prompt.";$("#services").scrollIntoView({behavior:motion?"smooth":"auto"})});
+const categoryInfo={
+all:["Every business deserves a premium digital presence.","Try a website, logo, promotional flyer, price list, WhatsApp marketing copy or social advertisement."],
+barber:["Barbershop starter ideas","Try a price list, barber promotion flyer, booking landing page, loyalty offer, logo or WhatsApp status advert."],
+salon:["Salon & beauty starter ideas","Try a service menu, treatment promotion, appointment landing page, brand kit or social-media campaign."],
+restaurant:["Restaurant starter ideas","Try a menu, food promotion, delivery advert, opening-hours graphic or a simple business website."],
+retail:["Retail & wholesale starter ideas","Try a product catalogue, price list, sales poster, stock promotion, order form or shop website."],
+hotel:["Hotel & lodge starter ideas","Try a room promotion, amenities brochure, enquiry landing page, location guide or social advertisement."],
+fashion:["Fashion business starter ideas","Try a collection launch poster, lookbook, price list, brand kit or order enquiry page."],
+tech:["Technology business starter ideas","Try a service catalogue, repair price list, product promotion, portfolio or business website."],
+events:["Events business starter ideas","Try an event flyer, ticket information page, invitation, sponsorship deck or promotional campaign."],
+other:["Let's find a useful starting point","Tell the project assistant what your business does and what result you want to achieve."]
+};
+$("#categoryList").addEventListener("click",e=>{const b=e.target.closest("[data-category]");if(!b)return;$$(".category").forEach(x=>x.classList.toggle("active",x===b));const d=categoryInfo[b.dataset.category]||categoryInfo.other;$("#categoryTitle").textContent=d[0];$("#categoryCopy").textContent=d[1]});
+$$(".start-service").forEach(b=>b.addEventListener("click",()=>{$("#projectType").value=({ "Business Website":"Business website","Logo & Branding":"Logo and branding","Flyers & Posters":"Flyer or poster","Social Media Ads":"Social media advertisement","Menus & Price Lists":"Menu or price list","Prompt & Code Packs":"AI prompt pack"})[b.dataset.service]||"I'm not sure";$("#studio").scrollIntoView({behavior:motion?"smooth":"auto"});$("#businessType").focus()}));
+let latestBrief="";
+$("#projectForm").addEventListener("submit",e=>{e.preventDefault();const type=$("#projectType").value,biz=$("#businessType").value.trim()||"Not specified",name=$("#businessName").value.trim()||"Not specified",goal=$("#projectGoal").value.trim(),contact=$("#contactInfo").value.trim()||"Not provided",files=$("#referenceFile").files;
+if(!goal){toast("Please describe what you want to create.");$("#projectGoal").focus();return}
+latestBrief=`LUX SMART GH — PROJECT BRIEF\n\nProject: ${type}\nBusiness type: ${biz}\nBusiness/project name: ${name}\nGoal and instructions:\n${goal}\nContact details to include: ${contact}\nReference files selected: ${files.length} (not uploaded by this demo)\n\nCREATIVE DIRECTION\nUse a professional, customer-friendly design. Keep text readable on mobile. Confirm spelling, prices and contact details before final delivery. Ask for clarification if key information is missing.\n\nIMPORTANT\nThis is a generated brief, not a finished design or an API-generated AI result.`;
+$("#aiOutput").textContent=latestBrief;toast("Project brief created in this browser.");if(motion){$("#aiOutput").classList.remove("bounce");void $("#aiOutput").offsetWidth;$("#aiOutput").classList.add("bounce")}});
+$("#copyBrief").addEventListener("click",async()=>{if(!latestBrief){toast("Create a project brief first.");return}try{await navigator.clipboard.writeText(latestBrief);toast("Brief copied.")}catch{toast("Copy is unavailable here. Use Download .txt instead.")}});
+$("#downloadBrief").addEventListener("click",()=>{if(!latestBrief){toast("Create a project brief first.");return}const blob=new Blob([latestBrief],{type:"text/plain;charset=utf-8"}),url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download="lux-smart-gh-project-brief.txt";a.click();URL.revokeObjectURL(url)});
+$("#listenBtn").addEventListener("click",()=>{if(!("speechSynthesis" in window)){toast("Text-to-speech is not supported by this browser.");return}speechSynthesis.cancel();const text=latestBrief||"Welcome to LUX SMART GH. Describe your business and what you would like to create, then create your project brief.";const u=new SpeechSynthesisUtterance(text);u.rate=0.95;speechSynthesis.speak(u)});
+$("#payButton").addEventListener("click",()=>{toast("Checkout is disabled until a backend order and payment-verification endpoint are configured. Do not accept payment from this demo.")});
+// Small decorative spark effect; automatically respects the motion setting.
+document.addEventListener("pointerdown",e=>{if(!motion||window.matchMedia("(prefers-reduced-motion: reduce)").matches)return;for(let i=0;i<4;i++){const s=document.createElement("i");s.className="spark";s.style.left=e.clientX+"px";s.style.top=e.clientY+"px";s.style.setProperty("--dx",(Math.random()*70-35)+"px");s.style.setProperty("--dy",(Math.random()*-65-10)+"px");document.body.appendChild(s);setTimeout(()=>s.remove(),750)}});
+</script>
+</body>
+</html>
